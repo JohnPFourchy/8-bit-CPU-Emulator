@@ -1,0 +1,37 @@
+If highest bit is 1: ALU operation
+TODO: Add the ability to display information with an OUT or DIS command
+      for now I can cheat with printf() to do so
+
+ALU operations:
+000 - ADD
+001 - SHR
+010 - SHL
+011 - NOT
+100 - AND
+101 - OR
+110 - XOR
+111 - CMP
+
+Register bits:
+00  -   Register 0
+01  -   Register 1
+10  -   Register 2
+11  -   Register 3
+
+Instruction Set:
+1000RARB    -   ADD RA, RB
+1001RARB    -   SHR RA, RB
+1010RARB    -   SHL RA, RB
+1011RARB    -   NOT RA, RB
+1100RARB    -   AND RA, RB
+1101RARB    -   OR  RA, RB
+1110RARB    -   XOR RA, RB
+1111RARB    -   CMP RA, RB
+
+0000RARB    -   LD  RA, RB 
+0001RARB    -   ST  RA, RB
+001000RB    -   DATA, RB, Addr
+001100RB    -   JMPR RB
+01000000    -   JMP Addr
+0101CAEZ    -   JCAEZ Addr
+01100000    -   CLF
