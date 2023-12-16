@@ -1,6 +1,4 @@
 If highest bit is 1: ALU operation
-TODO: Add the ability to display information with an OUT or DIS command
-      for now I can cheat with printf() to do so
 
 ALU operations:
 000 - ADD
@@ -11,6 +9,12 @@ ALU operations:
 101 - OR
 110 - XOR
 111 - CMP
+
+CPU Flags:  Used for Jump instructions
+EQUAL       -     1 if RA and RB in ALU operation are equal
+ZERO        -     1 if ALU operation results in 0
+ALARGER     -     1 if RA in ALU operation is larger than RB
+CARRYOUT    -     1 if ALU operation causes a carryout
 
 Register bits:
 00  -   Register 0
@@ -34,4 +38,4 @@ Instruction Set:
 001100RB    -   JMPR RB
 01000000    -   JMP Addr
 0101CAEZ    -   JCAEZ Addr
-01100000    -   CLF
+01100000    -   END OF PROGRAM
